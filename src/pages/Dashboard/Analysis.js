@@ -215,7 +215,7 @@ class Analysis extends Component {
                   label={
                     <FormattedMessage id="app.analysis.day-sales" defaultMessage="Day Sales" />
                   }
-                  value={`${numeral(124).format('0,0')} chiếc`}
+                  value={`${numeral(3000).format('0,0')} chiếc`}
                 />
               }
               contentHeight={46}
@@ -234,7 +234,7 @@ class Analysis extends Component {
             <ChartCard
               bordered={false}
               loading={loading}
-              title={<FormattedMessage id="app.analysis.payments" defaultMessage="Payments" />}
+              title={<FormattedMessage id="app.analysis.area1" defaultMessage="Payments" />}
               action={
                 <Tooltip
                   title={
@@ -253,7 +253,69 @@ class Analysis extends Component {
                       defaultMessage="Conversion Rate"
                     />
                   }
-                  value="60%"
+                  value="1000 chiếc"
+                />
+              }
+              contentHeight={46}
+            >
+              <MiniBar data={visitData} />
+            </ChartCard>
+          </Col>
+          <Col {...topColResponsiveProps}>
+            <ChartCard
+              bordered={false}
+              loading={loading}
+              title={<FormattedMessage id="app.analysis.area2" defaultMessage="Payments" />}
+              action={
+                <Tooltip
+                  title={
+                    <FormattedMessage id="app.analysis.introduce" defaultMessage="Introduce" />
+                  }
+                >
+                  <Icon type="info-circle-o" />
+                </Tooltip>
+              }
+              total={numeral(5020).format('0,0')}
+              footer={
+                <Field
+                  label={
+                    <FormattedMessage
+                      id="app.analysis.conversion-rate"
+                      defaultMessage="Conversion Rate"
+                    />
+                  }
+                  value="1200 chiếc"
+                />
+              }
+              contentHeight={46}
+            >
+              <MiniBar data={visitData} />
+            </ChartCard>
+          </Col>
+          <Col {...topColResponsiveProps}>
+            <ChartCard
+              bordered={false}
+              loading={loading}
+              title={<FormattedMessage id="app.analysis.area3" defaultMessage="Payments" />}
+              action={
+                <Tooltip
+                  title={
+                    <FormattedMessage id="app.analysis.introduce" defaultMessage="Introduce" />
+                  }
+                >
+                  <Icon type="info-circle-o" />
+                </Tooltip>
+              }
+              total={numeral(8560).format('0,0')}
+              footer={
+                <Field
+                  label={
+                    <FormattedMessage
+                      id="app.analysis.conversion-rate"
+                      defaultMessage="Conversion Rate"
+                    />
+                  }
+                  value="800 chiếc"
                 />
               }
               contentHeight={46}
